@@ -5,23 +5,38 @@
 
 
 name=input("enter your name : ")
+while len(name)==0 or name.isalpha()==False:
+    name=input("Enter Valid Name : ")
+    
 telephone=input("Enter Telephone Number : ")
-while len(telephone)>10 or len(telephone)<10:
-    telephone=input("Enter Correct Telephone Number : ")
+while len(telephone)!=10 or telephone.isnumeric()==False:
+    telephone=input("Enter Valid Telephone Number : ")
 
 age=input("Enter Your Age : ")
-while int(age)<18:
+while  age.isnumeric()==False or int(age)<20 or int(age)>99:
     age=(input("Enter Correct Age : "))
          
 salary=input("Enter your salary : ")
-while int(salary)<0:
-    salary=input("Enter Correct salary: ")
+while salary.isnumeric()==False or int(salary)<0 or salary=="" :
+    salary=input("Enter Valid salary: ")
     
+city=input("Enter your city: ")
+while city.isalpha()==False or len(city)==0 :
+    city=input("Enter valid City name: ")
+    
+department=input("Enter Your Department: ")
+while department.isalpha()==False or len(department)==0 :
+    department=input("Enter Valid Department: ")
+    
+
+print(" ")    
 print("Employee Details")
 print("Name: "+name)
 print("telephone: " + telephone)
 print("Age: "+ age)
 print("Salary: Rs"+salary)
+print("City: "+city)
+print("Department: "+department)
             
 
 
